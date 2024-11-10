@@ -1,0 +1,135 @@
+/* Basic reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #282c34;
+    color: #61dafb;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 5rem;
+    color: #61dafb;
+}
+
+.timer {
+    display: flex;
+    gap: 30px;
+    font-size: 8rem;
+    font-weight: bold;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.label {
+    font-size: 1.5rem;
+    color: #adb5bd;
+    display: block;
+    margin-top: -15px;
+}
+
+.end-time {
+    margin: 20px 0;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: #61dafb;
+    background-color: #20232a;
+    border: 2px solid #61dafb;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #282c34;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem; /* Smaller font size for mobile title */
+    }
+
+    .timer {
+        font-size: 5rem; /* Smaller timer size on mobile */
+        gap: 20px;
+    }
+
+    .label {
+        font-size: 1.2rem; /* Adjust label size for mobile */
+        margin-top: -10px;
+    }
+
+    .end-time, button {
+        font-size: 1.2rem; /* Smaller input and button font size */
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .timer {
+        font-size: 4rem;
+        gap: 15px;
+    }
+
+    .label {
+        font-size: 1rem;
+        margin-top: -8px;
+    }
+
+    .end-time, button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+/* Existing styles */
+
+.countdown-selection {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.countdown-selection label {
+    color: #61dafb;
+    font-size: 1.2rem;
+}
+
+.countdown-selection input {
+    width: 60px;
+    padding: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 2px solid #61dafb;
+    border-radius: 5px;
+    background-color: #20232a;
+    color: #61dafb;
+}

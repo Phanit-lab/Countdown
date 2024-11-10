@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+
+    <link rel="icon" href="alarm-clock.svg" type="image/x-icon"> <!-- Use .ico or .png or .jpg -->
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Countdown Timer</h1>
+        <div class="timer">
+            <!-- Dynamically hidden or shown sections -->
+            <span id="days-container" style="display: none;">
+                <span id="days">00</span><span class="label">Days</span>
+            </span>
+            <span id="hours-container" style="display: none;">
+                <span id="hours">00</span><span class="label">Hours</span>
+            </span>
+            <span id="minutes-container" style="display: none;">
+                <span id="minutes">00</span><span class="label">Minutes</span>
+            </span>
+            <span id="seconds-container" style="display: none;">
+                <span id="seconds">00</span><span class="label">Seconds</span>
+            </span>
+        </div>
+        
+        <!-- Countdown Selection -->
+        <div class="countdown-selection">
+            <label>
+                Days: <input type="number" id="set-days" min="0" value="0">
+            </label>
+            <label>
+                Hours: <input type="number" id="set-hours" min="0" max="23" value="0">
+            </label>
+            <label>
+                Minutes: <input type="number" id="set-minutes" min="0" max="59" value="0">
+            </label>
+            <label>
+                Seconds: <input type="number" id="set-seconds" min="0" max="59" value="0">
+            </label>
+        </div>
+        
+        <button onclick="startCountdown()">Start Countdown</button>
+    </div>
+
+    <!-- Hidden audio element for alarm sound -->
+    <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
